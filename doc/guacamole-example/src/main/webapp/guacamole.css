@@ -21,3 +21,15 @@
     cursor: url('dot.gif'),default;
 }
 
+/* Hide upper-left corner of remote display */
+#display::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;     /* change size */
+    height: 150px;    /* change size */
+    background: black;
+    z-index: 9999;
+    pointer-events: none; /* change to auto to block clicks */
+}
